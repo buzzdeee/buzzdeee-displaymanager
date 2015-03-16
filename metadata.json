@@ -1,0 +1,14 @@
+{
+  "name": "buzzdeee-displaymanager",
+  "version": "0.1.0",
+  "author": "Sebastian Reitenbach",
+  "summary": "Manages displamanager configuration",
+  "license": "Apache-2.0",
+  "source": "https://github.com/buzzdeee/buzzdeee-displaymanager.git",
+  "project_page": "https://github.com/buzzdeee/buzzdeee-displaymanager",
+  "issues_url": "https://github.com/buzzdeee/buzzdeee-displaymanager/issues",
+  "dependencies": [
+    {"name":"puppetlabs-inifile","version_requirement":">= 1.1.3"}
+  ]
+}
+
