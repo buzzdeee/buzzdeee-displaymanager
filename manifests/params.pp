@@ -18,7 +18,7 @@ class displaymanager::params {
       $root_login_local           = 'yes'
     }
     default: {
-      fail("Unsupported platform: buzzdeee-${module_name} currently doesn't support ${::osfamily}")
+      # deliberately kept empy
     }
   }
 }
