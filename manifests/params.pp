@@ -18,7 +18,7 @@ class displaymanager::params {
       $root_login_local           = 'yes'
     }
     default: {
-      # deliberately kept empy
+      $sysconfig_file             = undef
     }
   }
 }

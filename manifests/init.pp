@@ -51,19 +51,21 @@ class displaymanager (
   $root_login_local           = $::displaymanager::params::root_login_local,
 ) inherits displaymanager::params {
 
-  class { 'displaymanager::config':
-    sysconfig_file             => $sysconfig_file,
-    xserver                    => $xserver,
-    displaymanager             => $displaymanager,
-    remote_access              => $remote_access,
-    root_login_remote          => $root_login_remote,
-    starts_xserver             => $starts_xserver,
-    xserver_tcp_port_6000_open => $xserver_tcp_port_6000_open,
-    autologin                  => $autologin,
-    password_less_login        => $password_less_login,
-    ad_integration             => $ad_integration,
-    shutdown                   => $shutdown,
-    kdm_localargs              => $kdm_localargs,
-    root_login_local           => $root_login_local,
+  if $sysconfig_file {
+    class { 'displaymanager::config':
+      sysconfig_file             => $sysconfig_file,
+      xserver                    => $xserver,
+      displaymanager             => $displaymanager,
+      remote_access              => $remote_access,
+      root_login_remote          => $root_login_remote,
+      starts_xserver             => $starts_xserver,
+      xserver_tcp_port_6000_open => $xserver_tcp_port_6000_open,
+      autologin                  => $autologin,
+      password_less_login        => $password_less_login,
+      ad_integration             => $ad_integration,
+      shutdown                   => $shutdown,
+      kdm_localargs              => $kdm_localargs,
+      root_login_local           => $root_login_local,
+    }
   }
 }
